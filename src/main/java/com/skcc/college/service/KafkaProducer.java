@@ -2,8 +2,11 @@ package com.skcc.college.service;
 
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
+import org.springframework.context.annotation.Profile;
+
 
 @Service
+@Profile("producer")
 public class KafkaProducer {
 
     private static final String TOPIC = "test_topic";
